@@ -1,7 +1,7 @@
 import { useUserStore } from "@/store/user"
 
 // 请求基地址
-const baseURL = '你的api服务基地址'
+const baseURL = 'https://1313212416-e24y60n3lr.ap-guangzhou.tencentscf.com'
 
 //拦截方法：
 const httpInterceptor = {
@@ -77,5 +77,4 @@ export const http = (options: UniApp.RequestOptions) => {
             },
         })
     })
-
 }

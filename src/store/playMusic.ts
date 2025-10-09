@@ -29,7 +29,6 @@ export const usePlayMusicStore = defineStore("playMusic", () => {
     const getMusicDataUrl = async (id: string) => { //获取歌曲url
         const res: MusicUrlResponse = await getSongUrlApi(id)
         console.log("歌曲url", res);
-
         playMusicData.value!.url = res.data.data[0].url
     }
 

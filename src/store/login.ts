@@ -110,6 +110,7 @@ export const useLoginStore = defineStore('login', () => {
 
                     // 跳转到个人页面
                     setTimeout(() => {
+                        checkLoginStatus()
                         uni.navigateBack()
                     }, 1500)
 

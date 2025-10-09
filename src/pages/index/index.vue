@@ -50,9 +50,8 @@ onLoad(() => {
 <template>
   <view class="container">
     <navigationBar></navigationBar>
-
     <!-- 主要内容区域 -->
-    <view class="main-content" :style="{ paddingBottom: (safeAreaInsets?.bottom || 0) + 50 + 'px' }">
+    <view class="main-content" :style="{ paddingBottom: (safeAreaInsets?.bottom || 0) + 100 + 'px' }">
 
       <!-- 热门歌单推荐 -->
       <view class="section">
@@ -82,7 +81,7 @@ onLoad(() => {
         <view class="song-list">
           <view class="song-item" v-for="song in hotSongs" :key="song.id" @tap="handleSongTap(song.id)">
             <view class="song-cover">
-              <image :src="song.al?.picUrl" :alt="song.name" class="cover-image" />
+              <image :src="song.al?.picUrl.replace('http:', 'https:')" :alt="song.name" class="cover-image" />
             </view>
             <view class="song-info">
               <text class="song-name">{{ song.name }}</text>
@@ -109,7 +108,7 @@ onLoad(() => {
 /* 主要内容区域 */
 .main-content {
   padding: 16px;
-  padding-top: 0;
+  margin-top: 30px;
 }
 
 /* 区块样式 */
