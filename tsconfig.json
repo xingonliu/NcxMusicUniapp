@@ -1,0 +1,46 @@
+{
+  // TypeScript配置文件 - NCX Music项目
+  "compilerOptions": {
+    // 编译目标版本
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    // 包含的库文件
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    // 模块系统
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "preserve",
+    // 严格模式设置
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    // 其他选项
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    // JavaScript和JSON支持
+    "allowJs": true,
+    "checkJs": false,
+    "types": [
+      "@dcloudio/types", // uni-app API 类型
+      "@uni-helper/uni-app-types", // uni-app 组件类型
+      "@uni-helper/uni-ui-types" // uni-ui 组件类型
+    ]
+  },
+  "vueCompilerOptions": {
+    // Vue编译器插件
+    "plugins": ["@uni-helper/uni-app-types/volar-plugin"]
+  },
+  // 包含的文件
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
+  // 排除的文件
+  "exclude": ["node_modules", "dist"]
+}
