@@ -1,6 +1,7 @@
 # NCX Music
 
 基于UniApp开发的音乐应用，采用Vue 3 + TypeScript技术栈。
+api源自[NeteaseCloudMusicApi](https://github.com/Binaryify/NeteaseCloudMusicApi)
 
 ## 项目特点
 
